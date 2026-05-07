@@ -2,11 +2,32 @@
 
 > **Find mock data, hardcoded values, and broken endpoints in your application.**
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](./LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/CodeShuX/mockhunter?style=social)](https://github.com/CodeShuX/mockhunter/stargazers)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-skill-d97757)](https://claude.com/claude-code)
+[![Playwright](https://img.shields.io/badge/Playwright-MCP-2EAD33)](https://github.com/microsoft/playwright-mcp)
+
 A Claude Code skill that opens your web app in a real browser, clicks every interactive element, traces every visible value to its actual source, and tells you — in plain English — what's real, what's mocked, and what's broken.
 
 ![MockHunter audits a Lovable admin dashboard in 60 seconds](./assets/demo.gif)
 
 *A real Lovable admin dashboard. Looks polished. **Zero of those numbers are real** — every value is a string literal in the JS bundle. [See the full audit report →](./examples/lovable-realestate.md)*
+
+---
+
+## Table of Contents
+
+- [Why this exists](#why-this-exists)
+- [Who this is for](#who-this-is-for)
+- [How it works](#how-it-works)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Sample output](#sample-output)
+- [FAQ](#faq)
+- [What MockHunter is NOT](#what-mockhunter-is-not)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
@@ -146,6 +167,52 @@ Then it runs all five phases and writes `mockhunter-report.md` in your current d
 ```
 
 [See full example reports →](./examples/)
+
+---
+
+## FAQ
+
+### Does it work with Lovable apps?
+Yes — Lovable is one of the primary targets. The README hero GIF is a real Lovable admin dashboard audit. MockHunter auto-detects `*.lovable.app` URLs and tunes its heuristics accordingly.
+
+### Does it work with Bolt / v0 / Replit / AI Studio / Cursor Composer?
+Yes. MockHunter auto-detects:
+- Bolt (`*.bolt.new`, `*.stackblitz.io`)
+- v0 (`*.v0.app`, `*.v0.dev`)
+- Replit (`*.replit.app`, `*.repl.co`)
+- Google AI Studio (`aistudio.google.com/*`)
+- Cursor Composer (any URL — falls back to "Custom" stack)
+
+Stack-specific heuristics are evolving — PRs welcome.
+
+### Do I need a database to use MockHunter?
+**No.** Database access is optional. Without it, MockHunter still detects HARDCODED, MOCK, LLM, and BROKEN values purely from network logs and DOM source. With a DB connection, it can additionally distinguish REAL from server-side-seeded values. See [docs/db-verification.md](./docs/db-verification.md).
+
+### Does it work for authenticated pages?
+Yes. Form-login (email + password) is supported in v0.1.0. OAuth, magic-link, and 2FA require a manual pre-login workaround (see [docs/auth-modes.md](./docs/auth-modes.md)).
+
+### Will it modify my app?
+No. MockHunter is read-only. It refuses to click destructive-looking buttons (delete, deactivate, transfer, etc.), never submits payment forms, never types real credentials, and only ever runs read-only DB SELECTs. See [docs/how-it-works.md](./docs/how-it-works.md#what-mockhunter-is-conservative-about).
+
+### How is this different from Lighthouse / Axe / Applitools / browser-use / Momentic?
+- **Lighthouse / Axe / Pa11y** — perf/SEO/a11y audits, not data provenance
+- **Applitools / Percy** — visual regression, requires baselines
+- **browser-use / Skyvern / LaVague** — task automators, not auditors
+- **Momentic / QA Wolf** — enterprise test-suite tools
+
+MockHunter does one thing: **for every visible value on a page, where does it actually come from?** None of the above answer that question.
+
+### How long does an audit take?
+~5–10 minutes for a typical dashboard with 25–50 elements. Page complexity drives the time. Future versions may add a fast-mode (~2 min) that skips Phase 3 interactivity.
+
+### Does it support multi-page crawls?
+Not in v0.1.0 — single page per run. Multi-page crawl is on the v0.2 roadmap.
+
+### Can I run it in CI?
+Not yet — v0.1.0 is interactive only. A GitHub Action that runs MockHunter on PR previews and posts the report as a PR comment is on the v0.2 roadmap.
+
+### What's the license?
+MIT. Use it commercially, modify it, redistribute it. See [LICENSE](./LICENSE).
 
 ---
 
