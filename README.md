@@ -77,7 +77,18 @@ Five phases, all automated:
 - [Claude Code](https://claude.com/claude-code) installed
 - [Playwright MCP](https://github.com/microsoft/playwright-mcp) configured (most Claude Code users have this already)
 
-**Three steps:**
+### Option 1 — One-line install via Claude Code marketplace (recommended)
+
+In any Claude Code session, run:
+
+```
+/plugin marketplace add CodeShuX/mockhunter
+/plugin install mockhunter@mockhunter
+```
+
+Done. The skill is registered and `/mockhunter` is available.
+
+### Option 2 — Manual symlink
 
 ```bash
 # 1. Clone the repo
@@ -90,7 +101,7 @@ ln -s ~/mockhunter/skill/SKILL.md ~/.claude/skills/mockhunter.md
 # 3. (Optional) Restart Claude Code if it's running
 ```
 
-That's it. Verify by typing `/mockhunter` in any Claude Code session.
+Verify either way by typing `/mockhunter` in any Claude Code session.
 
 ---
 
