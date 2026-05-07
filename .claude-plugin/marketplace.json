@@ -1,5 +1,4 @@
 {
-  "$schema": "https://json.schemastore.org/claude-plugin-marketplace",
   "name": "mockhunter",
   "owner": {
     "name": "CodeShuX",
