@@ -4,8 +4,9 @@
 
 A Claude Code skill that opens your web app in a real browser, clicks every interactive element, traces every visible value to its actual source, and tells you — in plain English — what's real, what's mocked, and what's broken.
 
-<!-- Demo GIF goes here once recorded -->
-<!-- ![MockHunter demo](./assets/demo.gif) -->
+![Admin dashboard audited by MockHunter](./assets/demo-screenshots/01-admin-dashboard-full.png)
+
+*This is a real Lovable admin dashboard. Looks polished. **Zero of those numbers are real** — every value is a string literal in the JS bundle. [See the full MockHunter audit report →](./examples/lovable-realestate.md)*
 
 ---
 
