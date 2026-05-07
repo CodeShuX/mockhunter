@@ -390,7 +390,7 @@ v0.1.0 ships when:
 - [ ] README has a working demo GIF embedded
 - [ ] At least 3 example reports in `examples/`
 - [ ] Installation tested fresh (without prior MockHunter state) takes <5 minutes
-- [ ] Zero references to AgenixSocial, Shubham's personal creds, or any private repo
+- [ ] Zero references to private repos, internal tooling, or personal credentials
 - [ ] PRs submitted to awesome-claude-code and antigravity-awesome-skills
 - [ ] Hacker News post drafted (not yet posted)
 
