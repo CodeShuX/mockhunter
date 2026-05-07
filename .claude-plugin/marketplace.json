@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/claude-plugin-marketplace",
+  "name": "mockhunter",
+  "owner": {
+    "name": "CodeShuX",
+    "url": "https://github.com/CodeShuX"
+  },
+  "metadata": {
+    "description": "MockHunter — Claude Code skill that audits live web pages for mock data, hardcoded values, and broken endpoints via Playwright.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "mockhunter",
+      "source": "./",
+      "description": "Audit live web pages for fake/mock data — 5-phase Playwright + Claude Code skill that classifies every visible value as REAL, MOCK, LLM, HARDCODED, BROKEN, or UNKNOWN. Targets vibe-coded apps (Lovable, Bolt, v0, Replit, AI Studio, Cursor Composer).",
+      "version": "0.1.0",
+      "author": {
+        "name": "CodeShuX",
+        "url": "https://github.com/CodeShuX"
+      },
+      "homepage": "https://github.com/CodeShuX/mockhunter",
+      "repository": "https://github.com/CodeShuX/mockhunter",
+      "license": "MIT",
+      "category": "testing",
+      "tags": [
+        "testing",
+        "qa",
+        "playwright",
+        "mock-detection",
+        "web-audit",
+        "ai-testing",
+        "vibe-coding"
+      ],
+      "skills": [
+        "./skill/SKILL.md"
+      ]
+    }
+  ]
+}
