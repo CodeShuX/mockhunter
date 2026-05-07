@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/social-preview.png" alt="MockHunter — Find mock data, hardcoded values, and broken endpoints in your application" width="100%" />
+</p>
+
 # MockHunter
 
 > **Find mock data, hardcoded values, and broken endpoints in your application.**
@@ -278,3 +282,13 @@ MIT — see [LICENSE](./LICENSE).
 ## Acknowledgments
 
 Built on top of [Playwright MCP](https://github.com/microsoft/playwright-mcp) by Microsoft and [Claude Code](https://claude.com/claude-code) by Anthropic. Both projects do the heavy lifting; MockHunter just orchestrates them with opinions.
+
+---
+
+<p align="center">
+  <img src="./assets/social-preview.png" alt="MockHunter" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/CodeShuX/mockhunter">github.com/CodeShuX/mockhunter</a> · <a href="./LICENSE">MIT</a>
+</p>
