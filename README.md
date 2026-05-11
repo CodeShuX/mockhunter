@@ -90,7 +90,7 @@ In any Claude Code session, run:
 /plugin install mockhunter@mockhunter
 ```
 
-Done. The skill is registered and `/mockhunter` is available.
+Done. The skill is registered and `/mockhunter:mockhunter` is available.
 
 ### Option 2 — Manual symlink
 
@@ -105,7 +105,7 @@ ln -s ~/mockhunter/skill/SKILL.md ~/.claude/skills/mockhunter.md
 # 3. (Optional) Restart Claude Code if it's running
 ```
 
-Verify either way by typing `/mockhunter` in any Claude Code session.
+Verify either way by typing `/mockhunter:mockhunter` in any Claude Code session.
 
 ---
 
@@ -114,7 +114,7 @@ Verify either way by typing `/mockhunter` in any Claude Code session.
 In any Claude Code session:
 
 ```
-/mockhunter
+/mockhunter:mockhunter
 ```
 
 The skill will ask:
@@ -129,7 +129,7 @@ Then it runs all five phases and writes `mockhunter-report.md` in your current d
 
 **Quickest — public page, no auth:**
 ```
-/mockhunter
+/mockhunter:mockhunter
 > URL: https://my-app.lovable.app
 > Auth: skip
 > DB: no
@@ -137,7 +137,7 @@ Then it runs all five phases and writes `mockhunter-report.md` in your current d
 
 **With auth and DB:**
 ```
-/mockhunter
+/mockhunter:mockhunter
 > URL: https://staging.myapp.com/dashboard
 > Auth: form
 > Login URL: https://staging.myapp.com/login
@@ -149,7 +149,7 @@ Then it runs all five phases and writes `mockhunter-report.md` in your current d
 
 **Localhost, frontend-only Lovable app:**
 ```
-/mockhunter
+/mockhunter:mockhunter
 > URL: http://localhost:5173
 > Auth: localhost
 > DB: no
