@@ -1,7 +1,5 @@
 ---
-name: mockhunter
 description: Audit a live web page to find mock data, hardcoded values, LLM-fabricated metrics, and broken endpoints. Opens the URL in Playwright, clicks every interactive element, traces every visible value to its actual source (DB/API/mock/LLM/hardcoded), and produces a markdown report. Use when the user wants a reality check on a vibe-coded app, AI-generated UI, or any web app where data provenance is uncertain.
-user_invocable: true
 ---
 
 # MockHunter — Live Page Reality Check
@@ -16,7 +14,7 @@ Output: a markdown report the user can read in two minutes.
 
 ## Quickstart
 
-User invokes `/mockhunter`. Skill collects inputs, runs all five phases, writes `mockhunter-report.md` to the current directory.
+User invokes `/mockhunter:mockhunter`. Skill collects inputs, runs all five phases, writes `mockhunter-report.md` to the current directory.
 
 If the user provides only a URL, ask the smart questions (Phase 1). If the user provides full config upfront, skip directly to Phase 2.
 

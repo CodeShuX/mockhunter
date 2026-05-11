@@ -1,0 +1,12 @@
+{
+  "name": "mockhunter",
+  "description": "Audit live web pages for fake/mock data — 5-phase Playwright + Claude Code skill that classifies every visible value as REAL, MOCK, LLM, HARDCODED, BROKEN, or UNKNOWN.",
+  "version": "0.1.1",
+  "author": {
+    "name": "CodeShuX",
+    "url": "https://github.com/CodeShuX"
+  },
+  "homepage": "https://github.com/CodeShuX/mockhunter",
+  "repository": "https://github.com/CodeShuX/mockhunter",
+  "license": "MIT"
+}

@@ -76,7 +76,7 @@ echo ".mockhunter-source/" >> .gitignore
 In any Claude Code session, type:
 
 ```
-/mockhunter
+/mockhunter:mockhunter
 ```
 
 If MockHunter is installed, the skill will start and ask for a target URL. If nothing happens, see [Troubleshooting](#troubleshooting).
@@ -99,7 +99,7 @@ rm -rf ~/mockhunter
 
 ## Troubleshooting
 
-### `/mockhunter` does nothing
+### `/mockhunter:mockhunter` does nothing
 
 - Restart Claude Code (the skill list is loaded at startup)
 - Verify the symlink exists: `ls -la ~/.claude/skills/mockhunter.md`

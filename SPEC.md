@@ -353,7 +353,7 @@ ln -s ~/.claude/skills/mockhunter-source/skill/SKILL.md ~/.claude/skills/mockhun
 
 # Step 3: Run
 # In any Claude Code session:
-/mockhunter
+/mockhunter:mockhunter
 ```
 
 The skill self-bootstraps from there: asks for URL, auth mode, etc.

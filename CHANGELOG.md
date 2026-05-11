@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.1.1] — 2026-05-11
+
+### Fixed
+- **Plugin structure** — added required `.claude-plugin/plugin.json` manifest. Without it, Claude Code did not register MockHunter as a plugin contributing skills, and `/mockhunter` was silently unavailable in installed sessions.
+- **Skills directory layout** — moved `skill/SKILL.md` to canonical `skills/<name>/SKILL.md` per Anthropic plugin docs (skills must live in a `skills/` directory with one folder per skill).
+- **Slash command form** — corrected from `/mockhunter` to namespaced `/mockhunter:mockhunter` per plugin namespacing rules.
+- **Frontmatter** — dropped non-canonical `name:` and `user_invocable:` fields; kept canonical `description:`.
+
+No changes to the audit logic — same 5-phase pipeline, same verdict taxonomy. Just makes the skill actually invocable post-install.
+
 ## [0.1.0] — 2026-05-07
 
 Initial public release.
